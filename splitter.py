@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import fitz
 import os
 
 def split_file(input_pdf_path, output_folder):
@@ -20,7 +20,6 @@ def split_file(input_pdf_path, output_folder):
     mid_x = width / 2
     mid_y = height / 2
 
-    # Define the 4 rectangles
     tiles = [
         fitz.Rect(0, 0, mid_x, mid_y),            # Top-left
         fitz.Rect(mid_x, 0, width, mid_y),        # Top-right
@@ -44,3 +43,4 @@ input_pdf = "Map.pdf"
 output_dir = "split_output"
 
 split_file(input_pdf, output_dir)
+
